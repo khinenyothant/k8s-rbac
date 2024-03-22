@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pod-reader-clusterrolebinding
+  namespace: orange
+roleRef: # points to the ClusterRole
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: pod-reader-clusterrole # name of ClusterRole
+subjects: # points to the ServiceAccount
+- kind: ServiceAccount
+  name: orange-sa # service account to bind to
+  namespace: orange # ns of service account

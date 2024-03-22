@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apple-pod2
+  namespace: apple
+spec:
+  containers:
+  - image: nginx
+    name: apple-pod2-container
+  serviceAccountName: apple-sa

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: orange-pod
+  namespace: orange
+spec:
+  containers:
+  - image: bibinwilson/docker-kubectl:latest
+    name: orange-pod-container
+  serviceAccountName: orange-sa

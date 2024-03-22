@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apple-pod
+  namespace: apple
+spec:
+  containers:
+  - image: bibinwilson/docker-kubectl:latest
+    name: apple-pod-container
+  serviceAccountName: apple-sa
